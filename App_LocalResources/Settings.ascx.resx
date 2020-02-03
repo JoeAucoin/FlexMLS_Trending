@@ -159,11 +159,8 @@
   <data name="lblShowPaging.Text" xml:space="preserve">
     <value>Show Paging</value>
   </data>
-  <data name="lblThumbPlacement.Text" xml:space="preserve">
-    <value>Image Alignment</value>
-  </data>
-  <data name="lblThumbSize.Text" xml:space="preserve">
-    <value>Image Max. Thumbnail Size</value>
+  <data name="lblTemplate.Text" xml:space="preserve">
+    <value>Template</value>
   </data>
   <data name="lblItemCssClass.Text" xml:space="preserve">
     <value>Item CSS Class</value>

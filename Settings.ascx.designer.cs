@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GIBS.Modules.FlexMLS_Trending {
-    
-    
-    public partial class Settings {
-        
+namespace GIBS.Modules.FlexMLS_Trending
+{
+
+
+    public partial class Settings
+    {
+
         /// <summary>
         /// sectMainSettings control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.SectionHeadControl sectMainSettings;
-        
+
         /// <summary>
         /// MainSection control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl MainSection;
-        
+
         /// <summary>
         /// lblItemCssClass control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblItemCssClass;
-        
+
         /// <summary>
         /// txtItemCssClass control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtItemCssClass;
-        
+
         /// <summary>
         /// lblMLSImagesUrl control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblMLSImagesUrl;
-        
+
         /// <summary>
         /// txtMLSImagesUrl control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMLSImagesUrl;
-        
+
         /// <summary>
         /// lblViewListing control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblViewListing;
-        
+
         /// <summary>
         /// ddlViewListing control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlViewListing;
-        
+
         /// <summary>
         /// lblNumberOfRecords control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblNumberOfRecords;
-        
+
         /// <summary>
         /// txtNumberOfRecords control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumberOfRecords;
-        
+
         /// <summary>
         /// lblShowPaging control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblShowPaging;
-        
+
         /// <summary>
         /// cbxShowPaging control.
         /// </summary>
@@ -119,43 +121,25 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbxShowPaging;
-        
+
         /// <summary>
-        /// lblThumbSize control.
+        /// lblTemplate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblThumbSize;
-        
+        protected global::DotNetNuke.UI.UserControls.LabelControl lblTemplate;
+
         /// <summary>
-        /// txtThumbSize control.
+        /// txtTemplate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThumbSize;
-        
-        /// <summary>
-        /// lblThumbPlacement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblThumbPlacement;
-        
-        /// <summary>
-        /// rblThumbPlacement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblThumbPlacement;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtTemplate;
+
         /// <summary>
         /// sectUnUsedSettings control.
         /// </summary>
@@ -164,7 +148,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.SectionHeadControl sectUnUsedSettings;
-        
+
         /// <summary>
         /// UnUsedSection control.
         /// </summary>
@@ -173,7 +157,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl UnUsedSection;
-        
+
         /// <summary>
         /// lblPropertyType control.
         /// </summary>
@@ -182,7 +166,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblPropertyType;
-        
+
         /// <summary>
         /// ddlPropertyType control.
         /// </summary>
@@ -191,7 +175,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPropertyType;
-        
+
         /// <summary>
         /// lblTownVillage control.
         /// </summary>
@@ -200,7 +184,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblTownVillage;
-        
+
         /// <summary>
         /// ddl_Town control.
         /// </summary>
@@ -209,7 +193,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_Town;
-        
+
         /// <summary>
         /// ddl_Village control.
         /// </summary>
@@ -218,7 +202,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_Village;
-        
+
         /// <summary>
         /// lblBedRooms control.
         /// </summary>
@@ -227,7 +211,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblBedRooms;
-        
+
         /// <summary>
         /// ddlBedRooms control.
         /// </summary>
@@ -236,7 +220,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlBedRooms;
-        
+
         /// <summary>
         /// lblBathRooms control.
         /// </summary>
@@ -245,7 +229,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblBathRooms;
-        
+
         /// <summary>
         /// ddlBathRooms control.
         /// </summary>
@@ -254,7 +238,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlBathRooms;
-        
+
         /// <summary>
         /// lblPriceRange control.
         /// </summary>
@@ -263,7 +247,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblPriceRange;
-        
+
         /// <summary>
         /// ddlPriceLow control.
         /// </summary>
@@ -272,7 +256,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPriceLow;
-        
+
         /// <summary>
         /// ddlPriceHigh control.
         /// </summary>
@@ -281,7 +265,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPriceHigh;
-        
+
         /// <summary>
         /// lblWaterFront control.
         /// </summary>
@@ -290,7 +274,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblWaterFront;
-        
+
         /// <summary>
         /// cbxWaterFront control.
         /// </summary>
@@ -299,7 +283,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbxWaterFront;
-        
+
         /// <summary>
         /// lblWaterView control.
         /// </summary>
@@ -308,7 +292,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblWaterView;
-        
+
         /// <summary>
         /// cbxWaterView control.
         /// </summary>
@@ -317,7 +301,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbxWaterView;
-        
+
         /// <summary>
         /// lblComplex control.
         /// </summary>
@@ -326,7 +310,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblComplex;
-        
+
         /// <summary>
         /// ddlComplex control.
         /// </summary>
@@ -335,7 +319,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlComplex;
-        
+
         /// <summary>
         /// lblDaysOnMarket control.
         /// </summary>
@@ -344,7 +328,7 @@ namespace GIBS.Modules.FlexMLS_Trending {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DotNetNuke.UI.UserControls.LabelControl lblDaysOnMarket;
-        
+
         /// <summary>
         /// ddlDOM control.
         /// </summary>

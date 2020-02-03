@@ -28,7 +28,7 @@ namespace GIBS.Modules.FlexMLS_Trending
         static string _imageAlign = "left";
         static string _MLSImagesURL = "";
         public string _ItemCssClass = "col-md-12 col-sm-6 col-xs-6";
-        
+        public string _Template = "";
         public int CurrentPage;
 
 
@@ -42,7 +42,12 @@ namespace GIBS.Modules.FlexMLS_Trending
                 {
                     _ItemCssClass = Settings["ItemCssClass"].ToString();
                 }
-                
+                if (Settings.Contains("ItemCssClass"))
+                {
+                    _Template = Settings["Template"].ToString();
+                }
+
+
                 if (!IsPostBack)
                 {
                     hidPage.Value = "0";
@@ -175,9 +180,10 @@ namespace GIBS.Modules.FlexMLS_Trending
 
         protected void lstContent_ItemDataBound(object sender, System.Web.UI.WebControls.DataListItemEventArgs e)
         {
+            Literal mytemplate = (Literal)e.Item.FindControl("LiteralTemplateContent");
 
-            HyperLink Line1 = (HyperLink)e.Item.FindControl("HyperLink1");
-            HyperLink Line2 = (HyperLink)e.Item.FindControl("HyperLink2");
+            string myOriginalTemplate = _Template.ToString();
+            
 
             string _content = Server.HtmlDecode(DataBinder.Eval(e.Item.DataItem, "Content").ToString());
             string _ListingNumber = DataBinder.Eval(e.Item.DataItem, "ListingNumber").ToString();
@@ -190,13 +196,24 @@ namespace GIBS.Modules.FlexMLS_Trending
             var result = vLink.Substring(vLink.LastIndexOf('/') + 1);
             // DISABLE ADDING OF NEW RECORD IF COMING FROM THIS MODULE BY QUERYSTRING ADDITION OF . . . /t/f
             vLink = vLink.ToString().Replace(result.ToString(), "tabid/" + _FlexMLSPage.ToString() + "/pg/v/t/f/MLS/" + _ListingNumber.ToString() + "/" + _pageName.ToString());
-            Line1.NavigateUrl = vLink.ToString();
-            Line2.NavigateUrl = vLink.ToString();
+           
 
-            Line1.Text = _content.ToString();
-            Line2.Text = "MLS# " + _ListingNumber.ToString() + " - " + _listingprice.ToString();
 
-            Image ListingImage = (Image)e.Item.FindControl("imgListingImage");
+            string _address = _content.Split(',')[0];
+            string _town = _content.Split(',')[1];
+            string _zipCode = _content.Split(',')[2].Replace("MA","").Trim();
+            //      LiteralTemplateContent.
+            myOriginalTemplate = FixTokens(myOriginalTemplate, "[MLS#]", _ListingNumber.ToString());
+            myOriginalTemplate = FixTokens(myOriginalTemplate, "[Address]", _address.ToString().Trim());
+            myOriginalTemplate = FixTokens(myOriginalTemplate, "[ListingPrice]", _listingprice.ToString());
+            myOriginalTemplate = FixTokens(myOriginalTemplate, "[Town]", _town.ToString().Trim());
+            myOriginalTemplate = FixTokens(myOriginalTemplate, "[ViewLink]", vLink.ToString());
+            myOriginalTemplate = FixTokens(myOriginalTemplate, "[ZipCode]", _zipCode.ToString());
+
+            mytemplate.Text = myOriginalTemplate.ToString();
+
+
+                  Image ListingImage = (Image)e.Item.FindControl("imgListingImage");
 
             string checkImage = _MLSImagesURL.ToString() + _ListingNumber.ToString() + ".jpg";
 
@@ -231,6 +248,21 @@ namespace GIBS.Modules.FlexMLS_Trending
 
         }
 
+
+        public string FixTokens(string _myOriginal, string _myToken, string _myReplacement)
+        {
+            try
+            {
+                string _ReturnValue = "";
+                _ReturnValue = _myOriginal.ToString().Replace(_myToken, _myReplacement.ToString()).ToString();
+                return _ReturnValue;
+            }
+            catch (Exception ex)
+            {
+                Exceptions.ProcessModuleLoadException(this, ex);
+                return ex.ToString();
+            }
+        }
 
         private static bool UrlExists(string url)
         {

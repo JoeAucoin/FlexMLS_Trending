@@ -10,7 +10,7 @@ using DotNetNuke.Entities.Tabs;
 
 namespace GIBS.Modules.FlexMLS_Trending
 {
-    public partial class Settings : ModuleSettingsBase
+    public partial class Settings : FlexMLS_TrendingSettings
     {
 
         /// <summary>
@@ -27,18 +27,10 @@ namespace GIBS.Modules.FlexMLS_Trending
                     GetTowns();
                     GetMyTabs();
 
-                 //   FlexMLS_TrendingSettings settingsData = new FlexMLS_TrendingSettings(this.TabModuleId);
-
-                    //settingsData.ThumbImageAlign = rblThumbPlacement.SelectedValue.ToString();
-
-                    if (Settings.Contains("ThumbImageAlign"))
+         
+                    if (Settings.Contains("Template"))
                     {
-                        rblThumbPlacement.SelectedValue = Settings["ThumbImageAlign"].ToString();
-                    }
-
-                    if (Settings.Contains("MaxThumbSize"))
-                    {
-                        txtThumbSize.Text = Settings["MaxThumbSize"].ToString();
+                        txtTemplate.Text = Settings["Template"].ToString();
                     }
 
                     if (Settings.Contains("ShowPaging"))
@@ -139,28 +131,13 @@ namespace GIBS.Modules.FlexMLS_Trending
         {
             try
             {
-                var modules = new ModuleController();
 
-                modules.UpdateTabModuleSetting(TabModuleId, "MLSImagesUrl", txtMLSImagesUrl.Text.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "ThumbImageAlign", rblThumbPlacement.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "MaxThumbSize", txtThumbSize.Text.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "ShowPaging", cbxShowPaging.Checked.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "NumberOfRecords", txtNumberOfRecords.Text.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "PropertyType", ddlPropertyType.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "Town", ddl_Town.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "Village", ddl_Village.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "Bedrooms", ddlBedRooms.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "Bathrooms", ddlBathRooms.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "PriceLow", ddlPriceLow.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "PriceHigh", ddlPriceHigh.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "WaterFront", cbxWaterFront.Checked.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "Waterview", cbxWaterView.Checked.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "Complex", ddlComplex.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "DOM", ddlDOM.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "FlexMLSPage", ddlViewListing.SelectedValue.ToString());
-                modules.UpdateTabModuleSetting(TabModuleId, "ItemCssClass", txtItemCssClass.Text.ToString());
-                //txtMLSImagesUrl
-
+                Template = txtTemplate.Text.ToString();
+                ItemCssClass = txtItemCssClass.Text.ToString();
+                MLSImagesUrl = txtMLSImagesUrl.Text.ToString();
+                FlexMLSPage = ddlViewListing.SelectedValue.ToString();
+                NumberOfRecords = txtNumberOfRecords.Text.ToString();
+                ShowPaging = cbxShowPaging.Checked.ToString();
 
             }
             catch (Exception ex)
@@ -174,12 +151,8 @@ namespace GIBS.Modules.FlexMLS_Trending
 
             try
             {
-
-
                 ddlViewListing.DataSource = TabController.GetPortalTabs(this.PortalId, this.TabId, true, false);
                 ddlViewListing.DataBind();
-
-
             }
             catch (Exception ex)
             {

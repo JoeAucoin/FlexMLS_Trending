@@ -82,50 +82,24 @@ namespace GIBS.Modules.FlexMLS_Trending.Components
             }
         }
 
-        public string ThumbImageAlign
+
+
+        public string Template
         {
             get
             {
-                if (Settings.Contains("ThumbImageAlign"))
-                    return Settings["ThumbImageAlign"].ToString();
+                if (Settings.Contains("Template"))
+                    return Settings["Template"].ToString();
                 return "";
             }
             set
             {
                 var mc = new ModuleController();
-                mc.UpdateModuleSetting(ModuleId, "ThumbImageAlign", value.ToString());
+                mc.UpdateModuleSetting(ModuleId, "Template", value.ToString());
             }
         }
 
-        public string MaxThumbSize
-        {
-            get
-            {
-                if (Settings.Contains("MaxThumbSize"))
-                    return Settings["MaxThumbSize"].ToString();
-                return "";
-            }
-            set
-            {
-                var mc = new ModuleController();
-                mc.UpdateModuleSetting(ModuleId, "MaxThumbSize", value.ToString());
-            }
-        }
 
-        public string MaxImageSize
-        {
-            get
-            {
-                if (Settings.Contains("MaxImageSize"))
-                    return Settings["MaxImageSize"].ToString();
-                return "";
-            }
-            set
-            {
-                var mc = new ModuleController();
-                mc.UpdateModuleSetting(ModuleId, "MaxImageSize", value.ToString());
-            }
-        }
 
         public string ShowPaging
         {

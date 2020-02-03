@@ -41,16 +41,14 @@
         </div>	  
         
         <div class="dnnFormItem">
-            <dnn:Label runat="server" ID="lblThumbSize" ControlName="txtThumbSize" ResourceKey="lblThumbSize" Suffix=":" />
-            <asp:Textbox ID="txtThumbSize" runat="server" Width="80px" />
+            <dnn:Label runat="server" ID="lblTemplate" ControlName="txtTemplate" ResourceKey="lblTemplate" Suffix=":" />
+            <asp:Textbox ID="txtTemplate" runat="server" TextMode="MultiLine"><div class="text-center">
+<a href="[ViewLink]"><b>[Address]</b><br />
+[Town], MA [ZipCode]</a>
+<br />MLS# [MLS#] - [ListingPrice]
+</div></asp:Textbox>
         </div>	       
-	     <div class="dnnFormItem">
-            <dnn:Label runat="server" ID="lblThumbPlacement" ControlName="rblThumbPlacement" ResourceKey="lblThumbPlacement" Suffix=":" />
-             <asp:RadioButtonList ID="rblThumbPlacement" runat="server" RepeatDirection="Horizontal">
-             <asp:ListItem Text="Left" Value="Left" />
-             <asp:ListItem Text="Right" Value="Right" />
-             </asp:RadioButtonList>
-        </div>
+
 
 </div>
 

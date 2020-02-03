@@ -25,13 +25,10 @@
                       <div class="panel-heading"><div class="fotorama" data-fit="cover" data-width="100%" data-ratio="800/600">
                             <asp:Image ID="imgListingImage" runat="server" BorderWidth="1px" />
                         </div></div>
-                      <div class="panel-body"><div>
-                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="true" />
-                    </div>
-                    <div>
-                        <asp:HyperLink ID="HyperLink2" runat="server" />
-                    </div>
-<asp:Label ID="lblContent" runat="server" />
+                      <div class="panel-body">
+
+                          <asp:Literal ID="LiteralTemplateContent" runat="server"></asp:Literal>
+
                       </div>
                     </div>
 

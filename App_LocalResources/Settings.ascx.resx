@@ -168,4 +168,7 @@
   <data name="lblMLSImagesUrl.Text" xml:space="preserve">
     <value>MLS Images Url</value>
   </data>
+  <data name="SelectModule.Text" xml:space="preserve">
+    <value>Select Module Page</value>
+  </data>
 </root>
